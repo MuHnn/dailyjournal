@@ -68,7 +68,7 @@ include"koneksi.php";
               </h1>
               <h4 class="lead display-6">
                 Menyimpan semua kenangan yang telah di lalui, karena kenangan
-                adalah hal yang harus di kenang.
+                adalah hal yang asik untuk dikenang.
               </h4>
             </div>
           </div>
