@@ -112,51 +112,51 @@ include"koneksi.php";
 <!-- article end -->
 
 <!-- galery -->
+<!-- Galery -->
 <section id="galery" class="bg-warning-subtle pb-5">
-      <div class="container">
+    <div class="container">
         <h1 class="text-center p-3">Gallery</h1>
         <div id="carouselExample" class="carousel slide">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="p7.jpg" class="d-block w-100" alt="1" />
+            <div class="carousel-inner">
+                <?php
+                $sql = "SELECT * FROM gallery ORDER BY tanggal DESC";
+                $hasil = $conn->query($sql); 
+
+                // Variabel untuk menentukan item pertama
+                $isActive = true;
+
+                while ($row = $hasil->fetch_assoc()) {
+                ?>
+                <div class="carousel-item <?= $isActive ? 'active' : '' ?>">
+                    <img src="img/<?= $row['gambar'] ?>" class="d-block w-100" alt="Gallery Image" />
+                </div>
+                <?php
+                    $isActive = false; // Setelah item pertama, set active ke false
+                }
+                ?>
             </div>
-            <div class="carousel-item">
-              <img src="p8.jpg" class="d-block w-100" alt="2" />
-            </div>
-            <div class="carousel-item">
-              <img src="p9.jpg" class="d-block w-100" alt="3" />
-            </div>
-            <div class="carousel-item">
-              <img src="p10.jpg" class="d-block w-100" alt="4" />
-            </div>
-            <div class="carousel-item">
-              <img src="p11.jpg" class="d-block w-100" alt="5" />
-            </div>
-            <div class="carousel-item">
-              <img src="p12.jpg" class="d-block w-100" alt="6" />
-            </div>
-          </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExample"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExample"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
+            <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="prev"
+            >
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="next"
+            >
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
+
     <!-- galery akhir -->
     <!-- footer -->
     <footer>
