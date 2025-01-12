@@ -87,7 +87,7 @@ if (!isset($_SESSION['username'])) {
     </nav>
     <!-- nav end -->
     <!-- content begin -->
-    <section id="content" class="p-5 bg-warning-subtle">
+    <section id="content" class="p-5 bg-success-subtle">
         <div class="container"> 
             <!-- content begin -->
 <section id="content" class="p-5 m-5">
@@ -163,7 +163,7 @@ if (!isset($_SESSION['username'])) {
             /></svg
         ></a>
       </div>
-      <div class="pb-3 text-center text-dark">Hafiz Ulin ©2024</div>
+      <div class="pb-3 text-center text-dark">dicky ©2024</div>
     </footer>
     <!-- foot akhir -->
     <script
@@ -174,7 +174,7 @@ if (!isset($_SESSION['username'])) {
     <!-- footer end -->
     <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    integrity="sha384-QBYtVtyANcHgFn2tz9RnQGtTg2YHnMUChLM8XUxwiIH0B1zvZIKCyDqO3aObW9Bt"
     crossorigin="anonymous"
     ></script>
 </body>

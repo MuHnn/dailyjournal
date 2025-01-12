@@ -140,11 +140,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </div>
                     </div>
                 </div>
+                <div class="row justify-content-center mt-4">
+                  <div class="col-md-4" style="margin-left: 110px;">
+                    <div class="card text-bg-light text-center" style="max-width: 20rem;">
+                      <div class="php_form">
+                        <?php
+                        if ($_REQUEST) {
+                            $input_user = $_POST['user'];
+                            $input_pass = $_POST['pass'];
+
+                            if ($input_user == $username && $input_pass == $password) {
+                                echo "Username dan Password cocok";
+                            } else {
+                                echo "Username dan Password tidak cocok";
+                            }
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
         </div>
-          <div class="row justify-content-center mt-4">
-          <div class="col-md-4" style="margin-left: 110px;">
-                  <div class="card text-bg-light text-center" style="max-width: 20rem;">
-                  <div class="php_form">
+    </div>
+    </section>
 </section>
 <!-- footer -->
 <footer>
